@@ -8,8 +8,8 @@ public class GuestTest {// ClASS OPEN
     Guest guestx;
 
     @Before
-    public void before(){ // OPEN BEFORE
-        guestx = new Guest("Tom", "Thumb");
+    public void setup(){ // OPEN BEFORE
+        guestx = new Guest("Tom", "Thumb", Nationality.UK);
     }// CLOSE BEFORE
 
 
@@ -22,6 +22,12 @@ public class GuestTest {// ClASS OPEN
     public void canCreateGuestAndGetSecondName(){
         assertEquals("Thumb", guestx.getSecondName());
     }
+
+    @Test
+    public void canRetrieveNationality(){
+        assertEquals("United Kingdom", guestx.getNationality());
+    }
+
 
 
 } // CLASS CLOSE

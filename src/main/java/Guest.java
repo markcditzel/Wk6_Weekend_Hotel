@@ -4,7 +4,7 @@ public class Guest { // OPEN CLASS
     private String firstName;
     private String secondName;
     private int passportNum;
-    private enum nationality; // this should be made an ENUM - select from a fixed list
+    private Nationality nationality; // this should be made an ENUM - select from a fixed list
 
     // Constructor
     // NB the passportnum and nationality are allowed to be empty when a new Guest is created
@@ -17,14 +17,24 @@ public class Guest { // OPEN CLASS
 
     //METHODS
 
-    //firstName Getter
+    //GETTER METHODS
+
+    //DIRECT firstName Getter
     public String getFirstName(){
         return this.firstName;
     }
 
-    //secondName Getter
+    //DIRECT secondName Getter
     public String getSecondName() {
         return this.secondName;
     }
+
+    /** INDIRECT Nationality Getter
+    // utilises the Nationality class method to return the enum-ITEM's associated FIELD-value
+    // which is a String ("Polish")*/
+      public String getNationality() {
+        return this.nationality.getNationality();
+    }
+
 
 } // CLOSE CLASS
