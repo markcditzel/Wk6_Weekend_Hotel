@@ -32,20 +32,18 @@ public class Hotel { //OPEN CLASS
         return this.name;
     }
 
-    // DIRECT count the number of guests checked into Hotel
+    /** DIRECT count the number of guests checked into Hotel
+     * Counts the number of guest object in the ArrayList CheckInGuest
+     * RETURN an integer (int)*/
     public int getGuestCount(){
         return checkedInGuests.size();
     }
 
-    // DIRECT add a guest object to the ArrayList<Guest>
-
-//    /**DIRECT rooms GETTER
-//     * Counts the number of ALL rooms the hotel has regardless of their subtypes
-//     * Utilises the inbuilt .size method of ArrayLists to count the number of entries within
-//     * RETURNS INTEGER*/
-//    public int getRoomCount(){
-//        return rooms.size();
-//    }
-
+    /** DIRECT adds a guest object to the Guest ArrayList (checkedInGuests)
+     * TAKES a GUEST object as an argument
+     * RETURNS VOID*/
+    public void checkInGuest(Guest guest){
+        this.checkedInGuests.add(guest);
+    }
 
 }//CLOSE CLASS
