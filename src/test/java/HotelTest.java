@@ -12,8 +12,27 @@ public class HotelTest {
         hotelx = new Hotel("Bates Motel");
     }
 
+    /** Can we create a Hotel object with a name */
     @Test
     public void canCreateAndNameHotel(){
         assertEquals("Bates Motel", hotelx.getName());
     }
+
+    /** Cane we check to see if the Guest ArrayList (CheckedInGuests) is empty */
+    @Test
+    public void isGuestArrayListEmpty(){
+        assertEquals(0, hotelx.getGuestCount());
+    }
+
+
+//    @Test
+//    public void canAddGuestToArrayListCheckInGuest(){
+//
+//    }
+
+//    /** Test the contents of the rooms ArrayList starts as 0 */
+//    @Test
+//    public void doesRoomsArrayListStartEmpty(){
+//        assertEquals(0, hotelx.getRoomCount);
+//    }
 }
