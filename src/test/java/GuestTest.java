@@ -14,11 +14,14 @@ public class GuestTest {// ClASS OPEN
 
 
     @Test
-    public void canCreateGuest(){
+    public void canCreateGuestAndGetFirstName(){
         assertEquals("Tom", guestx.getFirstName());
-
     }
 
+    @Test
+    public void canCreateGuestAndGetSecondName(){
+        assertEquals("Thumb", guestx.getSecondName());
+    }
 
 
 } // CLASS CLOSE
