@@ -31,7 +31,7 @@ public class HotelTest {
     }
 
     /**
-     * Can a guest onbject be added to the Guest ArrayList (CheckedInGuests)
+     * Can a guest object be added to the Guest ArrayList (CheckedInGuests)
      */
 
     @Test
@@ -39,6 +39,13 @@ public class HotelTest {
         hotelx.checkInGuest(guestx);
         assertEquals(1, hotelx.getGuestCount());
 
+    }
+
+    /** Can the total totalCheckedinGuests (int) be incremented upon checking in a guest object */
+    @Test
+    public void canGuestCountBeIncreased(){
+        hotelx.checkInGuest((guestx));
+        assertEquals(1, hotelx.getRunningTotal());
     }
 
 }
