@@ -20,7 +20,7 @@ public class Hotel { //OPEN CLASS
         this.name = name;
         this.checkedInGuests = new ArrayList<>();
         //this.rooms = new ArrayList<Rooms>(); // these should start empty
-        this.checkedInGuests = new ArrayList<Guest>(); // these should start empty
+        //this.checkedInGuests = new ArrayList<Guest>(); // these should start empty
         this.totalCheckedInGuests = 0; // this is a running total of all guests checked in
 
     } // CLOSE CON
@@ -39,6 +39,11 @@ public class Hotel { //OPEN CLASS
         return this.totalCheckedInGuests;
     }
 
+    //DIRECT checkedInGuests GETTER
+    public ArrayList<Guest> getCheckedInGuests(){
+        return this.checkedInGuests;
+    }
+
     // DIRECT Count the number of currently Checked in guests
     /** DIRECT count the number of guests checked into Hotel
      * Counts the number of guest object in the ArrayList CheckInGuest
@@ -55,5 +60,13 @@ public class Hotel { //OPEN CLASS
         this.checkedInGuests.add(guest);
         this.totalCheckedInGuests += 1;
     }
+
+    // DIRECT Remove Guest from ArrayList
+    //Return Guest object for assignment to Room
+    // Works with the Room class assignGuestToRoom method
+    public Guest assignGuestToRoom(){ // cant get method to work with a provided guest argument
+        return this.checkedInGuests.remove(0);// cant get it to accept the guest
+    }
+
 
 }//CLOSE CLASS

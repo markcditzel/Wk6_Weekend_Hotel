@@ -1,6 +1,9 @@
+import java.util.UUID;
+
 public class Guest { // OPEN CLASS
 
     // INSTANCE VARIABLES
+    private int guestID;
     private String firstName;
     private String secondName;
     private int passportNum;
@@ -9,6 +12,7 @@ public class Guest { // OPEN CLASS
     // Constructor
     // NB the passportNum and nationality are allowed to be empty when a new Guest is created
     public Guest(String firstName, String secondName, Nationality nationality){ // OPEN CON
+        this.guestID =+ 1;
         this.firstName = firstName;
         this.secondName = secondName;
         this.passportNum = 0;
@@ -27,6 +31,11 @@ public class Guest { // OPEN CLASS
     //DIRECT secondName Getter
     public String getSecondName() {
         return this.secondName;
+    }
+
+    //DIRECT guestID Getter
+    public int getGuestID(){
+        return this.guestID;
     }
 
     /** INDIRECT Nationality Getter
